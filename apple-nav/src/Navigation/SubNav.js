@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 import ItemLink from "./ItemLink.js";
 
-
-const Ul = styled.ul`
+const Div = styled.ul`
   margin: 0 auto;
   padding-top: 5px;
   display: flex;
@@ -16,11 +15,11 @@ const Ul = styled.ul`
 function SubNav(props) {
   const sectionData = props.navData.section[props.match.params.section];
   return (
-    <Ul>
+    <Div>
       {
         sectionData.map(item => <ItemLink item={item} />)
       }
-    </Ul>
+    </Div>
   );
 }
 

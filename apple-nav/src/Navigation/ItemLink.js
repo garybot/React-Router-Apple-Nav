@@ -6,10 +6,11 @@ const Img = styled.img`
 `
 
 function ItemLink(props) {
+  const item = props.item
   return (
-    <a href={props.item.url} className="sub-nav-link">
-      <Img src={props.item.url} alt={props.item.name} />
-      <p>{props.item.name}</p>
+    <a href={item.url} className="sub-nav-link">
+      <Img src={item.url} alt={item.name} />
+      <p>{item.name}</p>
     </a>
 
   )
